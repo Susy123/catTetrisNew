@@ -1,6 +1,6 @@
 /* pages/tetris/tetris.wxss */
 page {
-  background-color: rgb(237, 228, 199);
+  background-color: #ebf0c8;
   height: 100%;
   color: #666;
   font-size: 42rpx;
@@ -25,10 +25,10 @@ page {
   height: 800rpx;
   border:3px solid rgb(244, 237, 221);
   display: flex;
-  background-color: rgb(232, 221, 199);
+  background-color: #f7f9e9;
 }
 .next-screen {
-  background-color: rgb(232, 221, 199);
+  background-color: #f7f9e9;
   display: flex;
   align-items: center;
   justify-content: space-around;

@@ -285,19 +285,19 @@ Block.prototype = {
 function Block_i() {//1-16
   Block.call(this);
   this.shape = [
-    [1, 0, 0, 0],
-    [2, 0, 0, 0],
-    [3, 0, 0, 0],
-    [4, 0, 0, 0]
+    [1, 2, 3, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
   ];
 }
 Block_i.prototype = new Block();
 function Block_s() {//17-32
   Block.call(this);
   this.shape = [
-    [17, 0, 0, 0],
-    [18, 19, 0, 0],
-    [0, 20, 0, 0],
+    [0, 18, 17, 0],
+    [20, 19, 0, 0],
+    [0, 0, 0, 0],
     [0, 0, 0, 0]
   ];
 }
@@ -305,8 +305,8 @@ Block_s.prototype = new Block();
 function Block_j() {//33-48
   Block.call(this);
   this.shape = [
-    [33, 34, 35, 0],
-    [0, 0, 36, 0],
+    [0, 33, 0, 0],
+    [35, 34, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0]
   ];
@@ -325,9 +325,9 @@ Block_o.prototype = new Block();
 function Block_z() {//65-80
   Block.call(this);
   this.shape = [
-    [0, 68, 0, 0],
-    [66, 67, 0, 0],
-    [65, 0, 0, 0],
+    [65, 66, 0, 0],
+    [0, 67, 68, 0],
+    [0, 0, 0, 0],
     [0, 0, 0, 0]
   ];
 }
@@ -410,12 +410,12 @@ function clearNextContext() {
 
 }
 function drawBlockImgNext(imgNum, x, y) {
-  var imgSrc = '../imgs/' + imgNum + '.jpg';
+  var imgSrc = '../imgs/' + imgNum + '.png';
   nextContext.drawImage(imgSrc, y * blockItemWidth, x * blockItemWidth, blockItemWidth, blockItemWidth);
   // console.log('nextContext draw:', 'imgNum=', imgNum, 'x=', x, 'y=', y);
 }
 function drawBlockImg(imgNum, x, y) {
-  var imgSrc = '../imgs/' + imgNum + '.jpg';
+  var imgSrc = '../imgs/' + imgNum + '.png';
   mainContext.drawImage(imgSrc, y * blockItemWidth, x * blockItemWidth, blockItemWidth, blockItemWidth);
   // console.log('mainContext draw:', 'imgNum=', imgNum, 'x=', x, 'y=', y);
 }
@@ -598,7 +598,7 @@ Page({
     blockItemWidth = res.windowWidth * 50 / 750;
     mainContext = wx.createCanvasContext('mainCanvas', this);
     nextContext = wx.createCanvasContext('nextCanvas', this);
-    // var imgSrc = '../imgs/1.jpg';
+    // var imgSrc = '../imgs/1.png';
     // mainContext.drawImage(imgSrc, 250- blockItemWidth, 400- blockItemWidth, blockItemWidth, blockItemWidth);
     // mainContext.draw();
 
