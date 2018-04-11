@@ -441,9 +441,7 @@ Page({
   data: {
     score: 0, //得分
     startOrpause:'开始',
-    highScore:0,
-    columnList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    rowList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+    highScore:0
   },
 
   //得到分数，并判断是否为历史最高分并写入缓存

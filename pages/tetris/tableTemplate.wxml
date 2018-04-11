@@ -1,0 +1,13 @@
+<template name="tableTemplate">
+    <!-- table -->
+            <view id="panel" class="flex-column">
+              <block wx:for='{{16}}'>
+              <view class="flex-row flex-cell">
+                <block wx:for='{{10}}'>
+                  <view class="flex-cell flex-row"></view>
+                </block>
+                </view>
+              </block>
+            </view>
+            <!-- end of table -->
+</template>

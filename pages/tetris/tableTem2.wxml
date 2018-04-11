@@ -1,0 +1,37 @@
+<view class="table">
+        <view class="tr">
+            <view class="th">标题1</view>
+            <view class="th">标题2</view>
+            <view class="th">标题3</view>
+            <view class="th">标题4</view>
+            <view class="th">标题5</view>
+        </view>
+        <view class="tr" wx:for="{{5}}" wx:for-item="item">
+            <block wx:for="{{5}}" wx:for-item="item2">
+              <view class="td">{{item}}{{item2}}</view>
+            </block>
+        </view>
+    </view>
+
+    <!-- WXSS -->
+    .table {
+  border: 1px solid #dadada;
+  border-right:0;
+  border-bottom:0;
+  width:98%
+}
+.tr {
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td {
+  padding:10px;
+  border-bottom: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+.th{
+  font-weight: 400;
+  background-color: #dadada
+}
