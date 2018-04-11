@@ -2,6 +2,17 @@
 <view class='container'>
     <view class='screen'>
         <view class='main-screen'>
+            <!-- table -->
+            <view id="panel" class="flex-column">
+              <block wx:for='{{rowList}}'>
+              <view class="flex-row flex-cell">
+                <block wx:for='{{columnList}}'>
+                  <view class="flex-cell flex-row"></view>
+                </block>
+                </view>
+              </block>
+            </view>
+            <!-- end of table -->
             <canvas class='main-canvas' canvas-id="mainCanvas"></canvas>
         </view>
         <view class='side-screen'>
