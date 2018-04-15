@@ -458,6 +458,7 @@ Page({
         this.setData({
           score: this.data.score + 1
         })
+        wx.vibrateShort({});
         allBlock.splice(i, 1);
         allBlock.unshift([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
         clearBefore();
